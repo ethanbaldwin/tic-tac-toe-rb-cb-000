@@ -50,19 +50,23 @@ WIN_COMBINATIONS = [
   end
 
   def turn_count(board)
-    turns = board.detect do |i|
-      i == "X" || i == "O"
+  counter = 0
+  board.each do |space|
+    if space == "X" || space == "O"
+      counter+=1
     end
-    turns.count
   end
+  return counter
+end
 
 def current_player(board)
-  if turn_count%2 == 0
+  turn_count = turn_count(board)
+  if turn_count % 2 == 0
     return "X"
   else
     return "O"
   end
-  end
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
