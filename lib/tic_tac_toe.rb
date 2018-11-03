@@ -108,5 +108,4 @@ def play(board)
     puts "Congratulations, #{current_player(board)}!"
   elsif draw?(board)
     puts "Catscratch!"
-
 end
