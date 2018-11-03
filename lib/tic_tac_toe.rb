@@ -26,6 +26,7 @@ WIN_COMBINATIONS = [
   end
 
   def move(board, index, current_player)
+    current_player = current_player(board)
     board[index] = current_player
   end
 
