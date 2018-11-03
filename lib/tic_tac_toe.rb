@@ -49,8 +49,6 @@ WIN_COMBINATIONS = [
     end
   end
 
-  # Define your play method below
-
   def turn_count(board)
     turns = board.detect do |i|
       i == "X" || i == "O"
@@ -100,4 +98,15 @@ def winner(board)
   if won?(board)
 return  board[won?(board)[0]]
   end
+end
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Congratulations, #{current_player(board)}!"
+  elsif draw?(board)
+    puts "Catscratch!"
+
 end
