@@ -53,7 +53,7 @@ WIN_COMBINATIONS = [
     turns = board.detect do |i|
       i == "X" || i == "O"
     end
-    turn.count
+    turns.count
   end
 
 def current_player(board)
