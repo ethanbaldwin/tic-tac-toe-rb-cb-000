@@ -58,6 +58,12 @@ WIN_COMBINATIONS = [
     turn.count
   end
 
+def current_player(board)
+  if turn_count%2 == 0
+    return "X"
+  else
+    return "O"
+  end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
